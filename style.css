@@ -1,0 +1,20 @@
+#draggable { width: 80px; height: 80px; margin: 0 0 0 0; font-size: .9em; }
+#draggable1 { width: 40px; height: 40px; margin: 0 0 0 0; font-size: .9em; }
+#draggable2 { width: 40px; height: 20px; margin: 0 0 0 0; font-size: .5em; }
+  .ui-widget-header p, .ui-widget-content p { margin: 0; }
+  
+.div-table{
+  display:table;         
+}
+.div-table-row{
+  display:table-row;
+  height:40px;
+  
+}
+.div-table-cell{
+  display: table-cell;
+  border: 1px dashed #ccc;
+  border-width: thin;
+  width:40px;
+
+}

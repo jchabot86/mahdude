@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Draggable - Snap to element or grid</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  $(function() {
+    $( ".draggable" ).draggable({ snap:"div" });
+	
+    $('.draggable').on("drag", function(event, ui) {
+    	console.log(ui.position);
+    });
+  });
+  function createTable(){
+	 
+	var rows = new Number($("#rowcount").val());
+	var cols = new Number($("#columncount").val());
+	var tr = [];
+	for (var i = 0; i < rows; i++) {
+		var row = $('<div class="div-table-row"></div>').appendTo("#thepatio");
+		for (var j = 0; j < cols; j++) {
+			$('<div class="div-table-cell"></div>').appendTo(row); 
+		}
+	}
+  
+}
+
+function create5x5(){
+	var thehtml = $('<div id="draggable1" class="draggable ui-widget-content"><p>I am 5 x 5</p></div>');
+	thehtml.appendTo("#piececontainer");
+}
+
+
+function create10x10(){
+	var thehtml = $('<div id="draggable" class="draggable ui-widget-content"><p>I am 10 x 10</p></div>');
+	thehtml.appendTo("#piececontainer");
+}
+  </script>
+</head>
+<body>
+<div>
+  How many feet wide?:<input type="text" id="rowcount" /> ft.
+</div>
+<div>
+ How many feet long?:<input type="text" id="columncount" /> ft.
+</div>
+<input type="button" onclick="createTable();" value="Create Table" />
+</div>
+<div>
+<input type="button" onclick="create5x5();" value="Create 5x5" />
+<input type="button" onclick="create10x10();" value="Create 10x10" />
+</div>
+
+<br style="clear:both">
+<div id="piececontainer">
+</div>
+<br style="clear:both">
+<div id="thepatio" class="div-table">
+</div>
+ 
+ 
+</body>
+</html>
