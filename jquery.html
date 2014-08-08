@@ -24,8 +24,13 @@
   
 }
 
-function create5x5(){
-	var thehtml = $('<div id="draggable1" class="draggable ui-widget-content"><p>I am 5 x 5</p></div>');
+function createPiece(w,h){
+  var wpixels = w * 5;
+  var hpixels = h * 5;
+	var thehtml = $('<div id="draggable" class="draggable ui-widget-content"><p>'+w+' x '+h+'</p></div>');
+  thehtml.css({"width":wpixels+'px',"height":hpixels+'px'});
+
+
   thehtml.draggable({ snap:"div" });
   thehtml.on("drag", function(event, ui) {
       console.log(ui.position);
@@ -33,36 +38,31 @@ function create5x5(){
 	thehtml.appendTo("#piececontainer");
 }
 
-
-function create10x10(){
-	var thehtml = $('<div id="draggable" class="draggable ui-widget-content"><p>I am 10 x 10</p></div>');
-  thehtml.draggable({ snap:"div" });
-  thehtml.on("drag", function(event, ui) {
-      console.log(ui.position);
-    });
-	thehtml.appendTo("#piececontainer");
-}
   </script>
 </head>
 <body>
-<div>
-  How many feet wide?:<input type="text" id="rowcount" /> ft.
-</div>
-<div>
- How many feet long?:<input type="text" id="columncount" /> ft.
-</div>
-<input type="button" onclick="createTable();" value="Create Table" />
-</div>
-<div>
-<input type="button" onclick="create5x5();" value="Create 5x5" />
-<input type="button" onclick="create10x10();" value="Create 10x10" />
+  <div id="wrapper">
+  <div id="settings">
+  <div>
+    <div>
+      How many feet wide?:<input type="text" id="rowcount" /> ft.
+    </div>
+    <div>
+      How many feet long?:<input type="text" id="columncount" /> ft.
+    </div>
+    <input type="button" onclick="createTable();" value="Create Table" />
+  <div>
+    <input type="button" onclick="createPiece(5,5);" value="Create 5x5" />
+    <input type="button" onclick="createPiece(10,10);" value="Create 10x10" />
+  </div>
 </div>
 
 <br style="clear:both">
 <div id="piececontainer">
 </div>
-<br style="clear:both">
+</div>
 <div id="thepatio" class="div-table">
+</div>
 </div>
  
  
