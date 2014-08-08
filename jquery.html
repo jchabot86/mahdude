@@ -9,11 +9,6 @@
   <link rel="stylesheet" href="style.css">
   <script>
   $(function() {
-    $( ".draggable" ).draggable({ snap:"div" });
-	
-    $('.draggable').on("drag", function(event, ui) {
-    	console.log(ui.position);
-    });
   });
   function createTable(){
 	 
@@ -31,12 +26,20 @@
 
 function create5x5(){
 	var thehtml = $('<div id="draggable1" class="draggable ui-widget-content"><p>I am 5 x 5</p></div>');
+  thehtml.draggable({ snap:"div" });
+  thehtml.on("drag", function(event, ui) {
+      console.log(ui.position);
+    });
 	thehtml.appendTo("#piececontainer");
 }
 
 
 function create10x10(){
 	var thehtml = $('<div id="draggable" class="draggable ui-widget-content"><p>I am 10 x 10</p></div>');
+  thehtml.draggable({ snap:"div" });
+  thehtml.on("drag", function(event, ui) {
+      console.log(ui.position);
+    });
 	thehtml.appendTo("#piececontainer");
 }
   </script>
