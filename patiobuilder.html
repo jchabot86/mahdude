@@ -20,10 +20,24 @@
       How many feet long?:<input type="text" id="columncount" /> ft.
     </div>
     <input type="button" onclick="createTable();" value="Create Table" />
+	<div>Note: Each cell in the grid is 6in by 6in</div>
+	<br style="clear:both">
   <div>
-
-    <input type="button" onclick="createPiece(5,5);" value="Create 5x5" />
-    <input type="button" onclick="createPiece(10,10);" value="Create 10x10" />
+	<div> Pavers 
+		<div>
+		<input type="button" onclick="createPiece(12,12, 'paver');" value="Create 12'' x 12''" />
+		<input type="button" onclick="createPiece(12,42,'paver');" value="Create 12'' x 42''" />
+		</div>
+	</div>
+  </div>
+  <br style="clear:both">
+  <div>
+	<div> Treads 
+		<div>
+		<input type="button" onclick="createPiece(12,36,'tread');" value="Create 3' x 12''" />
+		<input type="button" onclick="createPiece(12,60,'tread');" value="Create 5' x 12''" />
+		</div>
+	</div>
   </div>
 </div>
 
