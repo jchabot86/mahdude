@@ -15,6 +15,15 @@
 	width: 200px;
 }
 
+#piececontainer {
+	float: left;
+	width: 200px;
+}
+
+#thepatio{
+	float: left;
+}
+
 .div-table{
   display:table;         
 }
@@ -29,10 +38,6 @@
   border-width: thin;
   width:18px;
 
-}
-
-#piececontainer{
-	left-margin: 220px;
 }
 
 .tread {
