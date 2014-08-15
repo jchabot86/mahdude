@@ -42,3 +42,11 @@
 .paver {
 	background-color: #FFFFFF;
 }
+
+.paverheading {
+	font-weight: bold;
+}
+
+.note {
+	font-style: italic;
+}

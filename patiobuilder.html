@@ -13,6 +13,7 @@
   <div id="wrapper">
   <div id="settings">
   <div>
+    <div class="paverheading"> Create the design Grid </div>
     <div>
       How many feet wide?:<input type="text" id="rowcount" /> ft.
     </div>
@@ -20,22 +21,38 @@
       How many feet long?:<input type="text" id="columncount" /> ft.
     </div>
     <input type="button" onclick="createTable();" value="Create Table" />
-	<div>Note: Each cell in the grid is 6in by 6in</div>
+	<div class="note">Note: Each cell in the grid is 6in by 6in</div>
 	<br style="clear:both">
   <div>
-	<div> Pavers 
+	<div class="paverheading"> Select a Paver Size
 		<div>
 		<input type="button" onclick="createPiece(12,12, 'paver');" value="Create 12'' x 12''" />
-		<input type="button" onclick="createPiece(12,42,'paver');" value="Create 12'' x 42''" />
+		<input type="button" onclick="createPiece(12,18,'paver');" value="Create 12'' x 18''" />
+    <input type="button" onclick="createPiece(12,24,'paver');" value="Create 12'' x 24''" />
+    <input type="button" onclick="createPiece(18,18,'paver');" value="Create 18'' x 28''" />
+    <input type="button" onclick="createPiece(18,24,'paver');" value="Create 18'' x 24''" />
+    <input type="button" onclick="createPiece(18,30,'paver');" value="Create 18'' x 30''" />
+    <input type="button" onclick="createPiece(24,24,'paver');" value="Create 24'' x 34''" />
+    <input type="button" onclick="createPiece(24,30,'paver');" value="Create 24'' x 30''" />
+    <input type="button" onclick="createPiece(24,36,'paver');" value="Create 24'' x 36''" />
+    <input type="button" onclick="createPiece(30,30,'paver');" value="Create 30'' x 30''" />
+    <input type="button" onclick="createPiece(30,36,'paver');" value="Create 30'' x 36''" />
+    <input type="button" onclick="createPiece(36,36,'paver');" value="Create 36'' x 36''" />
 		</div>
 	</div>
   </div>
   <br style="clear:both">
   <div>
-	<div> Treads 
+	<div class="paverheading"> Select a Tread Size
 		<div>
-		<input type="button" onclick="createPiece(12,36,'tread');" value="Create 3' x 12''" />
-		<input type="button" onclick="createPiece(12,60,'tread');" value="Create 5' x 12''" />
+		<input type="button" onclick="createPiece(12,36,'tread');" value="Create 12'' x 3'" />
+		<input type="button" onclick="createPiece(12,72,'tread');" value="Create 12'' x 6'" />
+    <input type="button" onclick="createPiece(18,36,'tread');" value="Create 18'' x 3'" />
+    <input type="button" onclick="createPiece(18,72,'tread');" value="Create 18'' x 6'" />
+    <input type="button" onclick="createPiece(18,120,'tread');" value="Create 18'' x 10'" />
+    <input type="button" onclick="createPiece(24,48,'tread');" value="Create 24'' x 4'" />
+    <input type="button" onclick="createPiece(24,90,'tread');" value="Create 24'' x 7.5'" />
+    <input type="button" onclick="createPiece(24,114,'tread');" value="Create 24'' x 9.5'" />
 		</div>
 	</div>
   </div>
